@@ -3,6 +3,7 @@ from django.conf import settings
 from celery import shared_task
 
 
+# Функция отправки приветственного собщения
 @shared_task
 def send_welcome_mail(user_email):
     subject = 'Приветственное письмо'
