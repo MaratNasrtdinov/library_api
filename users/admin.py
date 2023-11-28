@@ -1,6 +1,8 @@
 from django.contrib import admin
-from .models import UserModel
+from users.models import UserModel
 
+
+# Настройка полей в админке
 @admin.register(UserModel)
 class UserAdmin(admin.ModelAdmin):
     list_display = ('username', 'id', 'email')
