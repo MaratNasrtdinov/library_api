@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
-from .tasks import send_welcome_mail
+from users.tasks import send_welcome_mail
 
 
 # Модель пользователя
