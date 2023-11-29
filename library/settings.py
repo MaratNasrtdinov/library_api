@@ -24,6 +24,8 @@ env = environ.Env(
     DATABASE_NAME=(str),
     DATABASE_USER=(str),
     DATABASE_PASSWORD=(str),
+    DATABASE_HOST=(str),
+    DATABASE_PORT=(str),
 
 
     EMAIL_HOST=(str),
@@ -113,8 +115,8 @@ DATABASES = {
         'NAME': env('DATABASE_NAME'),
         'USER': env('DATABASE_USER'),
         'PASSWORD': env('DATABASE_PASSWORD'),
-        'HOST': 'localhost',  # or the hostname where your MySQL server is running
-        'PORT': '3306',  # or the port on which your MySQL server is listening
+        'HOST': env('DATABASE_HOST'),  # or the hostname where your MySQL server is running
+        'PORT': env('DATABASE_PORT'),  # or the port on which your MySQL server is listening
     }
 }
 
